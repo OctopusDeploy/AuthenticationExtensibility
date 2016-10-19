@@ -21,7 +21,7 @@ var localPackagesDir = "../LocalPackages";
 var artifactsDir = "./artifacts";
 var assetDir = "./BuildAssets";
 var globalAssemblyFile = "./source/Solution Items/VersionInfo.cs";
-var solutionToBuild = "./source/OctopusServerExtensibility.Authentication.sln";
+var solutionToBuild = "./source/OctopusAuthenticationExtensibility.sln";
 var fileToPublish = "./source/Octopus.Server.Extensibility.Authentication/bin/Release/Octopus.Server.Extensibility.Authentication.dll";
 var cleanups = new List<IDisposable>(); 
 
