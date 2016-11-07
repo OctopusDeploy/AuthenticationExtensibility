@@ -10,6 +10,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 
         bool SupportsPasswordManagement { get; }
 
-        AuthenticationProviderElement GetAuthenticationProviderElement(string siteBaseUri);
+        AuthenticationProviderElement GetAuthenticationProviderElement(string requestDirectoryPath);
     }
 }
