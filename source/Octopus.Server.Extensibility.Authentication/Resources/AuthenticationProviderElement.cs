@@ -18,7 +18,7 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
 
         public bool FormsLoginEnabled { get; set; }
 
-        public string FormsUsernameIdentifier { get; set; }
+        public string[] FormsUsernameIdentifiers { get; set; }
 
         public string LinkHtml { get; set; }
 
