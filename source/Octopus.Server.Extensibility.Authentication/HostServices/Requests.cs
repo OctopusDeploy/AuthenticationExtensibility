@@ -1,9 +1,11 @@
 ﻿
+using System.Linq;
+
 namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public static class Requests
     {
-        public static bool IsLocalUrl(string absoluteVirtualDirectoryPath, string url, string corsWhitelist)
+        public static bool IsLocalUrl(string absoluteVirtualDirectoryPath, string url, string[] whitelist)
         {
             // Credit to Microsoft - Preventing Open Redirection Attacks (C#)
             // http://www.asp.net/mvc/overview/security/preventing-open-redirection-attacks
@@ -14,7 +16,7 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
                              (url.StartsWith(absoluteVirtualDirectoryPath) ||
 
                              // Allows paths on the corsWhitelist, if one is defined
-                             (!string.IsNullOrWhiteSpace(corsWhitelist) && (corsWhitelist == "*" || url.ToLower().StartsWith(corsWhitelist.ToLower()))) ||
+                             (whitelist != null && whitelist.Length > 0 && whitelist.Any(url.StartsWith)) ||
 
                              // Allows "/" or "/foo" but not "//" or "/\".
                              (url[0] == '/' && (url.Length == 1 || (url[1] != '/' && url[1] != '\\'))) ||
