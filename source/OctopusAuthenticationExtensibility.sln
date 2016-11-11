@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\VersionInfo.cs = Solution Items\VersionInfo.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationExtensibilityTests", "AuthenticationExtensibilityTests\AuthenticationExtensibilityTests.csproj", "{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{364CBEB7-E0FA-4790-971A-9387B4F0F18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{364CBEB7-E0FA-4790-971A-9387B4F0F18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{364CBEB7-E0FA-4790-971A-9387B4F0F18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
