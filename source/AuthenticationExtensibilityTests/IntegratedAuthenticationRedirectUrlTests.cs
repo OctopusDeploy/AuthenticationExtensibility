@@ -16,6 +16,7 @@ namespace AuthenticationExtensibilityTests
         [TestCase("https://localhost:8065", "http://localhost:9005", new[] { "http://localhost:9005" }, ExpectedResult = true)]
         [TestCase("http://site1", "folder1/api", null, ExpectedResult = false)]
         [TestCase("http://site1", "http://site2/folder1/api", null, ExpectedResult = false)]
+        [TestCase("http://site1", "http://site2/folder1/api", new[] {""}, ExpectedResult = false)]
         [TestCase("https://localhost:8065", "http://localhost:9005", new[] { "https://localhost:9005" }, ExpectedResult = false)]
         public bool IsPathLocalTest(string directoryPath, string url, string[] whitelist)
         {
