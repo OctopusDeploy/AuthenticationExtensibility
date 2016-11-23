@@ -24,6 +24,9 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// Gets an AuthenticationProviderElement that describes the authentication providers configuration.
         /// This is typically used by the UI.
         /// </summary>
+        AuthenticationProviderElement GetAuthenticationProviderElement();
+
+        [ObsoleteEx(TreatAsErrorFromVersion = "2.0", RemoveInVersion = "2.0", ReplacementTypeOrMember = "GetAuthenticationProviderElement")]
         AuthenticationProviderElement GetAuthenticationProviderElement(string requestDirectoryPath);
 
         /// <summary>
