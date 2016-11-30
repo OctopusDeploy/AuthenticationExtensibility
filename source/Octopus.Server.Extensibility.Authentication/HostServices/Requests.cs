@@ -5,12 +5,6 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public static class Requests
     {
-        [ObsoleteEx(TreatAsErrorFromVersion = "2.0", RemoveInVersion = "2.0", ReplacementTypeOrMember = "IsLocalUrl")]
-        public static bool IsLocalUrl(string absoluteVirtualDirectoryPath, string url, string[] whitelist)
-        {
-            return IsLocalUrl(url, whitelist);
-        }
-
         public static bool IsLocalUrl(string url, string[] whitelist)
         {
             // Credit to Microsoft - Preventing Open Redirection Attacks (C#)
