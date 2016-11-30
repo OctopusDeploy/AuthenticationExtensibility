@@ -26,9 +26,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// </summary>
         AuthenticationProviderElement GetAuthenticationProviderElement();
 
-        [ObsoleteEx(TreatAsErrorFromVersion = "2.0", RemoveInVersion = "2.0", ReplacementTypeOrMember = "GetAuthenticationProviderElement")]
-        AuthenticationProviderElement GetAuthenticationProviderElement(string requestDirectoryPath);
-
         /// <summary>
         /// Gets the list of authentication URLs this provider uses.  This is used for things like whitelisting
         /// API access when in MaintenanceMode
