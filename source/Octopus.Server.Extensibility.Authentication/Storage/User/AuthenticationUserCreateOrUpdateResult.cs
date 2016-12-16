@@ -1,4 +1,5 @@
-﻿using Octopus.Data.Storage.User;
+﻿using Octopus.Data.Model.User;
+using Octopus.Data.Storage.User;
 
 namespace Octopus.Server.Extensibility.Authentication.Storage.User
 {
@@ -10,6 +11,10 @@ namespace Octopus.Server.Extensibility.Authentication.Storage.User
         }
 
         public AuthenticationUserCreateOrUpdateResult(string failureReason) : base(failureReason)
+        {
+        }
+
+        public AuthenticationUserCreateOrUpdateResult(IUser user) : base(user)
         {
         }
 
