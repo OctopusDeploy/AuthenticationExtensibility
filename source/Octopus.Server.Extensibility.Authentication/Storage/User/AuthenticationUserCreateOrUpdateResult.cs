@@ -5,7 +5,7 @@ namespace Octopus.Server.Extensibility.Authentication.Storage.User
 {
     public class AuthenticationUserCreateOrUpdateResult : UserCreateOrUpdateResult
     {
-        public AuthenticationUserCreateOrUpdateResult() : base((string)null)
+        public AuthenticationUserCreateOrUpdateResult() : base("Provider not enabled")
         {
             ProviderIsDisabled = true;
         }
