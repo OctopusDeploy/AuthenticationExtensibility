@@ -1,9 +1,9 @@
-﻿using Octopus.Data.Storage.User;
+﻿using Octopus.Server.Extensibility.Authentication.Storage.User;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface IDoesBasicAuthentication
     {
-        UserCreateOrUpdateResult ValidateCredentials(string username, string password);
+        AuthenticationUserCreateOrUpdateResult ValidateCredentials(string username, string password);
     }
 }
