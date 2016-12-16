@@ -1,10 +1,10 @@
 ﻿using System.Security.Principal;
-using Octopus.Data.Storage.User;
+using Octopus.Server.Extensibility.Authentication.Storage.User;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface ISupportsAutoUserCreationFromPrincipal
     {
-        UserCreateOrUpdateResult GetOrCreateUser(IPrincipal principal);
+        AuthenticationUserCreateOrUpdateResult GetOrCreateUser(IPrincipal principal);
     }
 }
