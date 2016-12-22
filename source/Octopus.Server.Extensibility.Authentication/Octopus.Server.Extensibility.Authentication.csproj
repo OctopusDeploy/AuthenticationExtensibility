@@ -61,8 +61,8 @@
       <HintPath>..\packages\Obsolete.Fody.4.1.0\lib\dotnet\Obsolete.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Octopus.Data, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Octopus.Data.1.0.18\lib\netstandard1.0\Octopus.Data.dll</HintPath>
+    <Reference Include="Octopus.Data, Version=1.0.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Octopus.Data.1.0.19\lib\netstandard1.0\Octopus.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -88,6 +88,7 @@
     <Compile Include="Extensions\IAuthenticationSchemeProvider.cs" />
     <Compile Include="Extensions\IExternalGroupsChecker.cs" />
     <Compile Include="Extensions\ISupportsAutoUserCreationFromPrincipal.cs" />
+    <Compile Include="Extensions\IDoesBasicAuthentication.cs" />
     <Compile Include="HostServices\AuthorizationResult.cs" />
     <Compile Include="HostServices\ExternalSecurityGroup.cs" />
     <Compile Include="HostServices\IAuthCookieCreator.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Resources\AuthenticationProviderElement.cs" />
     <Compile Include="Resources\AuthenticationProviderThatSupportsGroups.cs" />
     <Compile Include="Resources\LoginCommand.cs" />
+    <Compile Include="Storage\User\AuthenticationUserCreateOrUpdateResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
