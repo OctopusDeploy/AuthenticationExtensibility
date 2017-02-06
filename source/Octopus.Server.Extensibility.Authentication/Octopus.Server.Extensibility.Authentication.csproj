@@ -98,6 +98,7 @@
     <Compile Include="HostServices\InvalidLoginAction.cs" />
     <Compile Include="HostServices\IOctopusPrincipal.cs" />
     <Compile Include="HostServices\Requests.cs" />
+    <Compile Include="HostServices\SessionExpiry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AuthenticationProviderElement.cs" />
     <Compile Include="Resources\AuthenticationProviderThatSupportsGroups.cs" />
