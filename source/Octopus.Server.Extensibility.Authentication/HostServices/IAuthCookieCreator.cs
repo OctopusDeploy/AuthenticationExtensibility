@@ -12,6 +12,6 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
             TreatAsErrorFromVersion = "3.0.0",
             ReplacementTypeOrMember = "CreateAuthCookies")]
         INancyCookie CreateAuthCookie(NancyContext context, Guid token, bool persistant);
-        INancyCookie[] CreateAuthCookies(NancyContext context, Guid token, SessionExpiry expiry);
+        INancyCookie[] CreateAuthCookies(Request request, Guid token, SessionExpiry expiry);
     }
 }
