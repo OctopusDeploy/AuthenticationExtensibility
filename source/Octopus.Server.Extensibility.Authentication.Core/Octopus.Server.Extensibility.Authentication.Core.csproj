@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp1.1;netstandard1.2</TargetFrameworks>
+    <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Octopus.Data" Version="1.0.24" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="System.Security.Principal" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+    <PackageReference Include="Nevermore.Contracts">
+      <Version>3.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

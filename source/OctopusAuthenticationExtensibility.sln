@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26510.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octopus.Server.Extensibility.Authentication", "Octopus.Server.Extensibility.Authentication\Octopus.Server.Extensibility.Authentication.csproj", "{364CBEB7-E0FA-4790-971A-9387B4F0F18C}"
 EndProject
@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationExtensibilityTests", "AuthenticationExtensibilityTests\AuthenticationExtensibilityTests.csproj", "{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Octopus.Server.Extensibility.Authentication.Core", "Octopus.Server.Extensibility.Authentication.Core\Octopus.Server.Extensibility.Authentication.Core.csproj", "{8C472E1E-A390-448B-84DA-C6D364FF4F96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ODCM.Server.Extensibility.Authentication", "ODCM.Server.Extensibility.Authentication\ODCM.Server.Extensibility.Authentication.csproj", "{4AC6D68B-236B-4C7F-9BE9-BFCD5C75F189}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091B0FF0-2BEF-4818-AACB-9BAED76D1AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C472E1E-A390-448B-84DA-C6D364FF4F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C472E1E-A390-448B-84DA-C6D364FF4F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C472E1E-A390-448B-84DA-C6D364FF4F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C472E1E-A390-448B-84DA-C6D364FF4F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC6D68B-236B-4C7F-9BE9-BFCD5C75F189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC6D68B-236B-4C7F-9BE9-BFCD5C75F189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC6D68B-236B-4C7F-9BE9-BFCD5C75F189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC6D68B-236B-4C7F-9BE9-BFCD5C75F189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
