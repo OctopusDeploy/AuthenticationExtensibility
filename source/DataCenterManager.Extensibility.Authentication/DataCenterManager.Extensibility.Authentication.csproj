@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;netstandard1.2</TargetFrameworks>
+    <TargetFrameworks>netstandard1.2</TargetFrameworks>
     <AssemblyName>Octopus.DataCenterManager.Extensibility.Authentication</AssemblyName>
     <RootNamespace>Octopus.DataCenterManager.Extensibility.Authentication</RootNamespace>
   </PropertyGroup>
