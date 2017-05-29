@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp1.1;netstandard1.2</TargetFrameworks>
+    <AssemblyName>Octopus.DataCenterManager.Extensibility.Authentication</AssemblyName>
+    <RootNamespace>Octopus.DataCenterManager.Extensibility.Authentication</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Extensions\" />
+    <PackageReference Include="Octopus.Data" Version="1.0.24" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Extensibility.Authentication.Core\Extensibility.Authentication.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.1;netstandard1.2</TargetFrameworks>
+    <AssemblyName>Octopus.Server.Extensibility.Authentication.Core</AssemblyName>
     <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
   </PropertyGroup>
 
