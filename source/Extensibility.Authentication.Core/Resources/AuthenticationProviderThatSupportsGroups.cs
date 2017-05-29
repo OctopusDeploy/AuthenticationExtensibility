@@ -1,4 +1,4 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.Resources
+﻿namespace Octopus.Node.Extensibility.Authentication.Resources
 {
     public class AuthenticationProviderThatSupportsGroups
     {

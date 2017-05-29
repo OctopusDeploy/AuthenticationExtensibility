@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Principal;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
+namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public interface IOctopusPrincipal : IPrincipal, IIdentity
     {

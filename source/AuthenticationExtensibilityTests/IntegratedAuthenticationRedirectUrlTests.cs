@@ -1,6 +1,6 @@
 ﻿using NSubstitute;
 using NUnit.Framework;
-using Octopus.Server.Extensibility.Authentication.HostServices;
+using Octopus.Node.Extensibility.Authentication.HostServices;
 
 namespace AuthenticationExtensibilityTests
 {

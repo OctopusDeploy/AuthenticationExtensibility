@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface IAuthenticationSchemeProvider
     {

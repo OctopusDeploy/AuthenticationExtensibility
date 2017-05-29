@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Octopus.Server.Extensibility.Authentication.Resources
+namespace Octopus.Node.Extensibility.Authentication.Resources
 {
     /// <summary>
     /// A command resource used for logging in.

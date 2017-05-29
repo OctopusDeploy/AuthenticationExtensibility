@@ -12,9 +12,9 @@
     <Folder Include="Extensions\" />
     <PackageReference Include="Octopus.Data" Version="1.0.24" />
   </ItemGroup>
-  
+
   <ItemGroup>
-    <ProjectReference Include="..\Extensibility.Authentication.Core\Extensibility.Authentication.Core.csproj" />
+    <ProjectReference Include="..\Extensibility.Authentication.Core\Node.Extensibility.Authentication.csproj" />
   </ItemGroup>
 
 </Project>

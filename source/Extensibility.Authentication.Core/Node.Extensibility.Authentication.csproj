@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.1;netstandard1.2</TargetFrameworks>
-    <AssemblyName>Octopus.Server.Extensibility.Authentication.Core</AssemblyName>
-    <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
+    <AssemblyName>Octopus.Node.Extensibility.Authentication</AssemblyName>
+    <RootNamespace>Octopus.Node.Extensibility.Authentication</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

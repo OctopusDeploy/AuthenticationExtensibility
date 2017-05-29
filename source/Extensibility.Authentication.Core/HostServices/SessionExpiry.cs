@@ -1,4 +1,4 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.HostServices
+﻿namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public enum SessionExpiry
     {

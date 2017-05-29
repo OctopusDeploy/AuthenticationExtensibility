@@ -1,6 +1,7 @@
 ﻿using System;
 using Nancy;
 using Nancy.Cookies;
+using Octopus.Node.Extensibility.Authentication.HostServices;
 
 namespace Octopus.Server.Extensibility.Authentication.HostServices
 {

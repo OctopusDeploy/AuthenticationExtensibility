@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ODCM.Server.Extensibility.Authentication.HostServices
+namespace Octopus.DataCenterManager.Extensibility.Authentication.HostServices
 {
     public interface IAuthCookieCreator
     {

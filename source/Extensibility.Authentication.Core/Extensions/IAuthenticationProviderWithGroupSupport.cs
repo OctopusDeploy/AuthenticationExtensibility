@@ -1,6 +1,6 @@
-﻿using Octopus.Server.Extensibility.Authentication.Resources;
+﻿using Octopus.Node.Extensibility.Authentication.Resources;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface IAuthenticationProviderWithGroupSupport : IAuthenticationProvider
     {

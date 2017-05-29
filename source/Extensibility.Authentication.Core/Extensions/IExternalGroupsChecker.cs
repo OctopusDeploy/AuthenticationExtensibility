@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Octopus.Data.Model.User;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface IExternalGroupsChecker
     {

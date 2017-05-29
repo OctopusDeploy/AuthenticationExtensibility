@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Extensibility.Authentication.Core\Extensibility.Authentication.Core.csproj" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="..\Extensibility.Authentication.Core\Node.Extensibility.Authentication.csproj" />
   </ItemGroup>
 
   </Project>

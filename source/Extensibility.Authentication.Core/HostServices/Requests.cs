@@ -1,7 +1,7 @@
 ﻿
 using System.Linq;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
+namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public static class Requests
     {

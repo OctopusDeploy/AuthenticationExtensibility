@@ -1,6 +1,6 @@
 ﻿using Octopus.Server.Extensibility.Authentication.Storage.User;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface IDoesBasicAuthentication
     {
