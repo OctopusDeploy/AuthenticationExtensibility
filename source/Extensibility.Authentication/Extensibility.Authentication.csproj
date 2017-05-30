@@ -5,7 +5,13 @@
     <TargetFramework>net451</TargetFramework>
     <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
     <AssemblyName>Octopus.Server.Extensibility.Authentication</AssemblyName>
-    <Description>Octopus Deploy: Extensibility.Authentication</Description>
+    <Description>Provides the agreed authentication contracts between Octopus Server and Octopus Server Extensions.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>Octopus Deploy</Authors>
+    <PackageId>Octopus.Server.Extensibility.Authentication</PackageId>
+    <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
+    <PackageLicenseUrl>https://octopus.com/</PackageLicenseUrl>
+    <PackageProjectUrl>https://octopus.com/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
