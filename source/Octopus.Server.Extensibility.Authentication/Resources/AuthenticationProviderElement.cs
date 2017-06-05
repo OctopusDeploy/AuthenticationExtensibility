@@ -21,5 +21,9 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         public string LinkHtml { get; set; }
 
         public LinkCollection Links { get; set; }
+
+        public string[] JavascriptLinks { get; set; }
+
+        public string[] CSSLinks { get; set; }
     }
 }
