@@ -6,7 +6,6 @@
     <RootNamespace>Octopus.Node.Extensibility.Authentication</RootNamespace>
     <Description>Provides the agreed contracts between Octopus server side authentication extensions.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>4.0.0</Version>
     <Authors>Octopus Deploy</Authors>
     <PackageId>Octopus.Node.Extensibility.Authentication</PackageId>
     <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
