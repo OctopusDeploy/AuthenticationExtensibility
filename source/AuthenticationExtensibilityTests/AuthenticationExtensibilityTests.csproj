@@ -21,4 +21,4 @@
     <ProjectReference Include="..\Node.Extensibility.Authentication\Node.Extensibility.Authentication.csproj" />
   </ItemGroup>
 
-  </Project>
+</Project>
