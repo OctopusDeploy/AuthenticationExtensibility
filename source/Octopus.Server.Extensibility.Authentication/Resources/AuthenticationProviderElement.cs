@@ -18,8 +18,6 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
 
         public bool FormsLoginEnabled { get; set; }
 
-        public string LinkHtml { get; set; }
-
         public LinkCollection Links { get; set; }
 
         public string[] JavascriptLinks { get; set; }
