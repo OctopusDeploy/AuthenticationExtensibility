@@ -10,7 +10,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Storage\" />
     <Folder Include="Extensions\" />
-    <PackageReference Include="Octopus.Data" Version="1.0.24" />
+    <PackageReference Include="Octopus.Data" Version="1.0.26-enh-odcm0014" />
   </ItemGroup>
 
   <ItemGroup>

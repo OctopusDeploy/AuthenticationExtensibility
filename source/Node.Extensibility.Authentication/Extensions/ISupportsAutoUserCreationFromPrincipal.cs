@@ -1,5 +1,5 @@
 ﻿using System.Security.Principal;
-using Octopus.Server.Extensibility.Authentication.Storage.User;
+using Octopus.Node.Extensibility.Authentication.Storage.User;
 
 namespace Octopus.Node.Extensibility.Authentication.Extensions
 {

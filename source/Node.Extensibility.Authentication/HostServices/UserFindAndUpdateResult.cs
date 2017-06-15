@@ -1,6 +1,6 @@
 using Octopus.Data.Model.User;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
+namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public class UserFindAndUpdateResult
     {
