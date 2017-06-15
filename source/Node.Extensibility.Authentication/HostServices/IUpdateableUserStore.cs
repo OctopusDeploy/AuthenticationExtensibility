@@ -1,16 +1,10 @@
-﻿using Octopus.Data.Storage.User;
+﻿using Octopus.Data.Model.User;
+using Octopus.Data.Storage.User;
 
 namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public interface IUpdateableUserStore : IUserStore
     {
-        UserCreateOrUpdateResult GetOrCreateUser(
-            string username, 
-            string displayName, 
-            string emailAddress, 
-            string externalId,
-            ApiKeyDescriptor apiKeyDescriptor = null);
-
         UserCreateOrUpdateResult Create(
             string username,
             string displayName,
@@ -28,5 +22,8 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
 
         void EnableUser(string userId);
         void DisableUser(string userId);
+
+        IUser AddIdentity(string userId, IIdentity identity);
+        IUser UpdateIdentity(string userId, IIdentity identity);
     }
 }
