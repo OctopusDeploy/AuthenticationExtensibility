@@ -1,3 +1,2 @@
 mode: Mainline
-commit-message-incrementing: Disabled
-next-version: 4.0.0
+major-version-bump-message: '\+octopussemver:\s?(breaking|major)'
