@@ -5,6 +5,6 @@ namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface ISupportsAutoUserCreationFromPrincipal
     {
-        AuthenticationUserCreateOrUpdateResult GetOrCreateUser(IPrincipal principal);
+        AuthenticationUserCreateResult GetOrCreateUser(IPrincipal principal);
     }
 }

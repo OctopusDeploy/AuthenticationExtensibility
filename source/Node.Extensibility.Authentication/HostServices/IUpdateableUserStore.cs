@@ -5,25 +5,19 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
     public interface IUpdateableUserStore : IUserStore
     {
-        UserCreateOrUpdateResult Create(
+        UserCreateResult Create(
             string username,
             string displayName,
             string emailAddress, 
+            Identity identity = null,
             ApiKeyDescriptor apiKeyDescriptor = null, 
             string id = null,
             bool isService = false);
 
-        UserCreateOrUpdateResult CreateOrUpdate(
-            string username,
-            string displayName,
-            string emailAddress,
-            ApiKeyDescriptor apiKeyDescriptor,
-            bool isService);
-
         void EnableUser(string userId);
         void DisableUser(string userId);
 
-        IUser AddIdentity(string userId, IIdentity identity);
-        IUser UpdateIdentity(string userId, IIdentity identity);
+        IUser AddIdentity(string userId, Identity identity);
+        IUser UpdateIdentity(string userId, Identity identity);
     }
 }

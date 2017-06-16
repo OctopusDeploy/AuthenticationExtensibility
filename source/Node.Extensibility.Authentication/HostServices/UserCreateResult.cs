@@ -3,22 +3,22 @@ using Octopus.Data.Model.User;
 
 namespace Octopus.Node.Extensibility.Authentication.HostServices
 {
-    public class UserCreateOrUpdateResult
+    public class UserCreateResult
     {
-        public UserCreateOrUpdateResult(IUser user)
+        public UserCreateResult(IUser user)
         {
             Succeeded = user != null;
             User = user;
         }
 
-        public UserCreateOrUpdateResult(string failureReason)
+        public UserCreateResult(string failureReason)
         {
             if (string.IsNullOrWhiteSpace(failureReason))
                 throw new ArgumentException("User creation failure reason not provided", nameof(failureReason));
             FailureReason = failureReason;
         }
 
-        public UserCreateOrUpdateResult(UserCreateOrUpdateResult copyFrom)
+        public UserCreateResult(UserCreateResult copyFrom)
         {
             Succeeded = copyFrom.Succeeded;
             User = copyFrom.User;
