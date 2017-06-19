@@ -12,7 +12,8 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
             Identity identity = null,
             ApiKeyDescriptor apiKeyDescriptor = null, 
             string id = null,
-            bool isService = false);
+            bool isService = false,
+            string password = null);
 
         void EnableUser(string userId);
         void DisableUser(string userId);
