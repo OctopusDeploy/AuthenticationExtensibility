@@ -18,8 +18,5 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
 
         void EnableUser(string userId);
         void DisableUser(string userId);
-
-        IUser AddIdentity(string userId, Identity identity);
-        IUser UpdateIdentity(string userId, Identity identity);
     }
 }
