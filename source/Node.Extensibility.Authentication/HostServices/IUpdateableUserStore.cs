@@ -20,7 +20,7 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
         void EnableUser(string userId);
         void DisableUser(string userId);
 
-        void ClearSecurityGroupIds(string provider);
-        void SetSecurityGroupIds(string provider, IEnumerable<string> ids, DateTimeOffset updated);
+        void ClearSecurityGroupIds(string provider, string userId);
+        void SetSecurityGroupIds(string provider, string userId, IEnumerable<string> ids, DateTimeOffset updated);
     }
 }
