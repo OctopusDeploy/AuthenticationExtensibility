@@ -1,4 +1,5 @@
-﻿using Octopus.Data.Model.User;
+﻿using System.Collections.Generic;
+using Octopus.Data.Model.User;
 using Octopus.Data.Storage.User;
 
 namespace Octopus.Node.Extensibility.Authentication.HostServices
@@ -9,7 +10,7 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
             string username,
             string displayName,
             string emailAddress, 
-            Identity identity = null,
+            IEnumerable<Identity> identities = null,
             ApiKeyDescriptor apiKeyDescriptor = null, 
             string id = null,
             bool isService = false,

@@ -4,6 +4,6 @@ namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface ICanLookupExternalUsers
     {
-        Identity[] Search(string searchTerm);
+        Identity[] Search(string provider, string searchTerm);
     }
 }
