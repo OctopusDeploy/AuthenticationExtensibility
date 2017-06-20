@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Octopus.Data.Model.User;
 using Octopus.Data.Storage.User;
 
@@ -18,5 +19,8 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
 
         void EnableUser(string userId);
         void DisableUser(string userId);
+
+        void ClearSecurityGroupIds(string provider);
+        void SetSecurityGroupIds(string provider, IEnumerable<string> ids, DateTimeOffset updated);
     }
 }
