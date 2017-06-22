@@ -1,4 +1,6 @@
-﻿using Octopus.Data.Model;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Octopus.Data.Model;
 
 namespace Octopus.Node.Extensibility.Authentication.Resources
 {
@@ -14,7 +16,8 @@ namespace Octopus.Node.Extensibility.Authentication.Resources
 
         public string Name { get; set; }
 
-        public bool IsGuestProvider { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public IdentityType IdentityType { get; set; }
 
         public bool FormsLoginEnabled { get; set; }
 
