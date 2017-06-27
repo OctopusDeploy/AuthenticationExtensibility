@@ -4,12 +4,16 @@
     <TargetFrameworks>netstandard1.2</TargetFrameworks>
     <AssemblyName>Octopus.DataCenterManager.Extensibility.Authentication</AssemblyName>
     <RootNamespace>Octopus.DataCenterManager.Extensibility.Authentication</RootNamespace>
+    <Description>Provides the agreed contracts between Octopus Data Center Manager server side authentication extensions.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>Octopus Deploy</Authors>
+    <PackageId>Octopus.DataCenterManager.Extensibility.Authentication</PackageId>
+    <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
+    <PackageLicenseUrl>https://octopus.com/</PackageLicenseUrl>
+    <PackageProjectUrl>https://octopus.com/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Storage\" />
-    <Folder Include="Extensions\" />
     <PackageReference Include="Octopus.Data" Version="2.0.0-enh-odcm0026" />
   </ItemGroup>
 
