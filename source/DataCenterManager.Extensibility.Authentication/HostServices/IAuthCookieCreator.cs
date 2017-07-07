@@ -6,6 +6,6 @@ namespace Octopus.DataCenterManager.Extensibility.Authentication.HostServices
 {
     public interface IAuthCookieCreator
     {
-        void CreateAuthCookies(HttpResponse response, Guid token, SessionExpiry expiry);
+        void CreateAuthCookies(HttpResponse response, Guid token, SessionExpiry expiry, bool isSecure);
     }
 }
