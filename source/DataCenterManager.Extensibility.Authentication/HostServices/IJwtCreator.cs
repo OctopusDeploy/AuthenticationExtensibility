@@ -4,6 +4,6 @@ namespace Octopus.DataCenterManager.Extensibility.Authentication.HostServices
 {
     public interface IJwtCreator
     {
-        string CreateFor(IUser user);
+        string CreateFor(IUser user, string nonce, string clientId);
     }
 }
