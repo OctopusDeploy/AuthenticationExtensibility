@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="Octopus.Data" Version="2.0.0-enh-odcm0026" />
+    <PackageReference Include="Octopus.Data" Version="2.0.0-alpha0038" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
     <PackageReference Include="System.Security.Principal" Version="4.3.0" />
   </ItemGroup>
