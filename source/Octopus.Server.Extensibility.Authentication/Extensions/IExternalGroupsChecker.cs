@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Octopus.Data.Model.User;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
+    [ObsoleteEx(Message = "Groups are no longer checked by calling this method that updated the user details. Please use IExternalGroupRetriever to get the user's groups", ReplacementTypeOrMember = "IExternalGroupRetriever", RemoveInVersion = "4.0", TreatAsErrorFromVersion = "4.0")]
     public interface IExternalGroupsChecker
     {
         /// <summary>

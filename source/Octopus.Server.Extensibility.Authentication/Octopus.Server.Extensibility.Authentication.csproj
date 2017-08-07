@@ -86,6 +86,7 @@
     <Compile Include="Extensions\IAuthenticationProvider.cs" />
     <Compile Include="Extensions\IAuthenticationProviderWithGroupSupport.cs" />
     <Compile Include="Extensions\IAuthenticationSchemeProvider.cs" />
+    <Compile Include="Extensions\IExternalGroupRetriever.cs" />
     <Compile Include="Extensions\IExternalGroupsChecker.cs" />
     <Compile Include="Extensions\ISupportsAutoUserCreationFromPrincipal.cs" />
     <Compile Include="Extensions\IDoesBasicAuthentication.cs" />
