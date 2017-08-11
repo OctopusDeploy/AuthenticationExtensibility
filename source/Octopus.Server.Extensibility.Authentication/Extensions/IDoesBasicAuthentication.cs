@@ -12,6 +12,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// the credentials don't match a known user.</remarks>
         int Priority { get; }
 
-        AuthenticationUserCreateOrUpdateResult ValidateCredentials(string username, string password, CancellationToken cancellationToken);
+        AuthenticationUserCreateResult ValidateCredentials(string username, string password, CancellationToken cancellationToken);
     }
 }

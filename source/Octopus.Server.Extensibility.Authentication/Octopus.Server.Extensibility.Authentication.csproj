@@ -61,7 +61,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Octopus.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Octopus.Data.2.0.0-enh-extsecgrpsch0012\lib\netstandard1.0\Octopus.Data.dll</HintPath>
+      <HintPath>..\packages\Octopus.Data.2.0.0-enh-extsecgrpsch0015\lib\netstandard1.0\Octopus.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -100,13 +100,15 @@
     <Compile Include="HostServices\ILoginRecorder.cs" />
     <Compile Include="HostServices\InvalidLoginAction.cs" />
     <Compile Include="HostServices\IOctopusPrincipal.cs" />
+    <Compile Include="HostServices\IUpdateableUserStore.cs" />
     <Compile Include="HostServices\Requests.cs" />
     <Compile Include="HostServices\SessionExpiry.cs" />
+    <Compile Include="HostServices\UserCreateResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AuthenticationProviderElement.cs" />
     <Compile Include="Resources\AuthenticationProviderThatSupportsGroups.cs" />
     <Compile Include="Resources\LoginCommand.cs" />
-    <Compile Include="Storage\User\AuthenticationUserCreateOrUpdateResult.cs" />
+    <Compile Include="Storage\User\AuthenticationUserCreateResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
