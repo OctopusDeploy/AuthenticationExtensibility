@@ -19,7 +19,7 @@
     <tags>automation deployment</tags>
     <developmentDependency>true</developmentDependency>
     <dependencies>
-      <dependency id="Octopus.Data" version="1.0.0" />
+      <dependency id="Octopus.Data" version="2.0.0" />
     </dependencies>
   </metadata>
   <files>
