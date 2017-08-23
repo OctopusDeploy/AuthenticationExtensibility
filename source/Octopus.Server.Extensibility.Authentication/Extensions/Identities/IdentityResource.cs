@@ -2,8 +2,6 @@
 {
     public abstract class IdentityResource
     {
-        public abstract string Type { get; }
-
         public string Provider { get; set; }
     }
 }
