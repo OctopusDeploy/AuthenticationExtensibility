@@ -1,5 +1,6 @@
 ﻿using System;
 using Octopus.Data.Model.User;
+using Octopus.Data.Resources.Users;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions.Identities
 {
@@ -15,8 +16,5 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions.Identities
         bool IdentityResourceTypeIsSupported(IdentityResource resource);
 
         Identity Map(IdentityResource resource);
-
-        bool? Matches(Identity identity1, Identity identity2);
-        bool? Matches(Identity identity, IdentityResource identityResource);
     }
 }
