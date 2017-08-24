@@ -10,11 +10,8 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions.Identities
 
         Type IdentityType { get; }
         bool IdentityTypeIsSupported(Identity identity);
-        IdentityResource Map(Identity identity);
 
         Type IdentityResourceType { get; }
         bool IdentityResourceTypeIsSupported(IdentityResource resource);
-
-        Identity Map(IdentityResource resource);
     }
 }
