@@ -61,7 +61,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Octopus.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Octopus.Data.2.0.0-enh-extsecgrpsch0032\lib\netstandard1.0\Octopus.Data.dll</HintPath>
+      <HintPath>..\packages\Octopus.Data.2.0.0-enh-extsecgrpsch0033\lib\netstandard1.0\Octopus.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
