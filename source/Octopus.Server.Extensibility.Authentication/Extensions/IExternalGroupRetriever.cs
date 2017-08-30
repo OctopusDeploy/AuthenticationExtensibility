@@ -12,7 +12,7 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 
     public class ExternalGroupResult
     {
-        public string ProviderName { get; set; }
+        public string IdentityProviderName { get; set; }
         public IEnumerable<string> GroupIds { get; set; }
     }
 }

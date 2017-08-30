@@ -4,7 +4,7 @@ namespace Octopus.Server.Extensibility.Authentication.Resources.Identities
 {
     public class IdentityMetadataResource
     {
-        public string ProviderName { get; set; }
+        public string IdentityProviderName { get; set; }
 
         public ClaimDescriptor[] ClaimDescriptors { get; set; }
 
