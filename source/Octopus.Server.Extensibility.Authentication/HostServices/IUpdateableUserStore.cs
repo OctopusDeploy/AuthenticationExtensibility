@@ -23,9 +23,9 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
 
         void DisableUser(string userId);
 
-        IUser AddIdentity(string userId, Identity identity);
+        IUser AddIdentity(string userId, Identity identity, CancellationToken cancellationToken);
 
-        IUser UpdateIdentity(string userId, Identity identity);
+        IUser UpdateIdentity(string userId, Identity identity, CancellationToken cancellationToken);
 
         void ClearSecurityGroupIds(string provider, string userId);
 
