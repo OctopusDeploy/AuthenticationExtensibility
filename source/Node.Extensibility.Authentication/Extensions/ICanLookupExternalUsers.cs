@@ -1,9 +1,9 @@
-﻿using Octopus.Data.Model.User;
+using System.Threading;
 
 namespace Octopus.Node.Extensibility.Authentication.Extensions
 {
     public interface ICanLookupExternalUsers
     {
-        Identity[] Search(string provider, string searchTerm);
+        ExternalUserLookupResult Search(string searchTerm, CancellationToken cancellationToken);
     }
 }

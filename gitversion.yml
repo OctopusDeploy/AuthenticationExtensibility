@@ -1,2 +1,1 @@
-mode: Mainline
-major-version-bump-message: '\+octopussemver:\s?(breaking|major)'
+mode: ContinuousDeployment

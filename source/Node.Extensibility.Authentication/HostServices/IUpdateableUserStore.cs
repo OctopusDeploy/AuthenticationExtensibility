@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using Octopus.Data.Model.User;
 using Octopus.Data.Storage.User;
 
@@ -10,20 +11,24 @@ namespace Octopus.Node.Extensibility.Authentication.HostServices
         UserCreateResult Create(
             string username,
             string displayName,
-            string emailAddress, 
+            string emailAddress,
+            CancellationToken cancellationToken,
+            ProviderUserGroups providerGroups = null,
             IEnumerable<Identity> identities = null,
-            ApiKeyDescriptor apiKeyDescriptor = null, 
-            string id = null,
+            ApiKeyDescriptor apiKeyDescriptor = null,
             bool isService = false,
             string password = null);
 
         void EnableUser(string userId);
+
         void DisableUser(string userId);
 
-        IUser AddIdentity(string userId, Identity identity);
-        IUser UpdateIdentity(string userId, Identity identity);
-        
+        IUser AddIdentity(string userId, Identity identity, CancellationToken cancellationToken);
+
+        IUser UpdateIdentity(string userId, Identity identity, CancellationToken cancellationToken);
+
         void ClearSecurityGroupIds(string provider, string userId);
+
         void SetSecurityGroupIds(string provider, string userId, IEnumerable<string> ids, DateTimeOffset updated);
     }
 }
