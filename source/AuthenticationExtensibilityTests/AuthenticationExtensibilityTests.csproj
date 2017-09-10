@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="Properties\" />
     <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
 
   <ItemGroup>
