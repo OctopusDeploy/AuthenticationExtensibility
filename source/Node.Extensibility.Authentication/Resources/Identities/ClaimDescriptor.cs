@@ -1,4 +1,4 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.Resources.Identities
+﻿namespace Octopus.Node.Extensibility.Authentication.Resources.Identities
 {
     public class ClaimDescriptor
     {

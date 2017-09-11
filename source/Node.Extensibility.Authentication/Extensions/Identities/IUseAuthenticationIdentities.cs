@@ -1,6 +1,6 @@
-﻿using Octopus.Server.Extensibility.Authentication.Resources.Identities;
+﻿using Octopus.Node.Extensibility.Authentication.Resources.Identities;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions.Identities
+namespace Octopus.Node.Extensibility.Authentication.Extensions.Identities
 {
     public interface IUseAuthenticationIdentities
     {
