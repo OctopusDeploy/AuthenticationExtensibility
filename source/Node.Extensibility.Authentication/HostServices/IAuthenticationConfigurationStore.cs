@@ -2,8 +2,6 @@
 {
     public interface IAuthenticationConfigurationStore
     {
-        string GetAuthenticationMode();
-
         string[] GetTrustedRedirectUrls();
 
         bool GetIsAutoLoginEnabled();
