@@ -75,6 +75,7 @@
     <Compile Include="..\Solution Items\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Extensions\ExternalGroupResult.cs" />
     <Compile Include="Extensions\ExternalUserLookupResult.cs" />
     <Compile Include="Extensions\IAuthenticationProvider.cs" />
     <Compile Include="Extensions\IAuthenticationProviderWithGroupSupport.cs" />
