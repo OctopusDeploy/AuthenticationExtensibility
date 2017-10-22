@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading;
+﻿using System.Threading;
 using Octopus.Data.Model.User;
 
 namespace Octopus.Node.Extensibility.Authentication.Extensions
@@ -8,11 +7,5 @@ namespace Octopus.Node.Extensibility.Authentication.Extensions
     {
         /// Returns the list of security group "ids".  For AD these would be sids, for OAuth these may be roles or sids
         ExternalGroupResult Read(IUser user, CancellationToken cancellationToken);
-    }
-
-    public class ExternalGroupResult
-    {
-        public string IdentityProviderName { get; set; }
-        public IEnumerable<string> GroupIds { get; set; }
     }
 }
