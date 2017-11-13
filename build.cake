@@ -33,8 +33,6 @@ Setup(context =>
 {
     if(BuildSystem.IsRunningOnTeamCity)
         BuildSystem.TeamCity.SetBuildNumber(gitVersionInfo.NuGetVersion);
-    if(BuildSystem.IsRunningOnAppVeyor)
-        AppVeyor.UpdateBuildVersion(gitVersionInfo.NuGetVersion);
     Information("Building Octopus.Server.Extensibility.Authentication v{0}", nugetVersion);
 });
 
@@ -108,11 +106,6 @@ Task("__Publish")
         ApiKey = EnvironmentVariable("MyGetApiKey")
     });
 
-    NuGetPush($"{artifactsDir}/Octopus.DataCenterManager.Extensibility.Authentication.{nugetVersion}.nupkg", new NuGetPushSettings {
-        Source = "https://octopus.myget.org/F/octopus-dependencies/api/v3/index.json",
-        ApiKey = EnvironmentVariable("MyGetApiKey")
-    });
-
     if (gitVersionInfo.PreReleaseLabel == "")
     {
         NuGetPush($"{artifactsDir}/Octopus.Node.Extensibility.Authentication.{nugetVersion}.nupkg", new NuGetPushSettings {
@@ -121,11 +114,6 @@ Task("__Publish")
         });
 
         NuGetPush($"{artifactsDir}/Octopus.Server.Extensibility.Authentication.{nugetVersion}.nupkg", new NuGetPushSettings {
-            Source = "https://www.nuget.org/api/v2/package",
-            ApiKey = EnvironmentVariable("NuGetApiKey")
-        });
-        
-        NuGetPush($"{artifactsDir}/Octopus.DataCenterManager.Extensibility.Authentication.{nugetVersion}.nupkg", new NuGetPushSettings {
             Source = "https://www.nuget.org/api/v2/package",
             ApiKey = EnvironmentVariable("NuGetApiKey")
         });
@@ -142,21 +130,7 @@ Task("__CopyToLocalPackages")
     CreateDirectory(localPackagesDir);
     CopyFileToDirectory(Path.Combine(artifactsDir, $"Octopus.Node.Extensibility.Authentication.{nugetVersion}.nupkg"), localPackagesDir);
     CopyFileToDirectory(Path.Combine(artifactsDir, $"Octopus.Server.Extensibility.Authentication.{nugetVersion}.nupkg"), localPackagesDir);
-    CopyFileToDirectory(Path.Combine(artifactsDir, $"Octopus.DataCenterManager.Extensibility.Authentication.{nugetVersion}.nupkg"), localPackagesDir);
 });
-
-private class AutoRestoreFile : IDisposable
-{
-    private byte[] _contents;
-    private string _filename;
-    public AutoRestoreFile(string filename)
-    {
-        _filename = filename;
-        _contents = IO.File.ReadAllBytes(filename);
-    }
-
-    public void Dispose() => IO.File.WriteAllBytes(_filename, _contents);
-}
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
