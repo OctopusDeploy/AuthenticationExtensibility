@@ -5,5 +5,7 @@
         string[] GetTrustedRedirectUrls();
 
         bool GetIsAutoLoginEnabled();
+
+        bool GetIsMultiFactorAuthRequired();
     }
 }
