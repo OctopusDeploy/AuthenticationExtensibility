@@ -2,7 +2,7 @@
 
 namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
-    public class CookieOptions
+    public class OctoCookie
     {
         /// <summary>Gets or sets the name of the cookie.</summary>
         /// <returns>The name of the cookie.</returns>
