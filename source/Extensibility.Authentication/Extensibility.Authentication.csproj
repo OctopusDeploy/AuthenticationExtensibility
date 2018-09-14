@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net451</TargetFramework>
+    <TargetFramework>netstandard1.2</TargetFramework>
     <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
     <AssemblyName>Octopus.Server.Extensibility.Authentication</AssemblyName>
     <Description>Provides the agreed authentication contracts between Octopus Server and Octopus Server Extensions.</Description>
