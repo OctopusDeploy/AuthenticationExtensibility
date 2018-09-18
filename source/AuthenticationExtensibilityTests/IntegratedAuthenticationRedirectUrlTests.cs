@@ -1,5 +1,4 @@
-﻿using NSubstitute;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Octopus.Node.Extensibility.Authentication.HostServices;
 
 namespace AuthenticationExtensibilityTests
@@ -7,6 +6,7 @@ namespace AuthenticationExtensibilityTests
     [TestFixture]
     public class IntegratedAuthenticationRedirectUrlTests
     {
+        [Test]
         [TestCase("/folder1/api", null, ExpectedResult = true)]
         [TestCase("~/folder1/api", null, ExpectedResult = true)]
         [TestCase("http://site1/folder1/api", null, ExpectedResult = false)]

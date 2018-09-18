@@ -1,21 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net451</TargetFrameworks>
+    <TargetFramework>net451</TargetFramework>
     <RootNamespace>AuthenticationExtensibilityTests</RootNamespace>
     <AssemblyName>AuthenticationExtensibilityTests</AssemblyName>
     <Description>AuthenticationExtensibilityTests</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NSubstitute" Version="1.10.0.0" />
-    <PackageReference Include="NUnit" Version="2.6.4" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />
-    <None Include="app.config" />
   </ItemGroup>
 
   <ItemGroup>
