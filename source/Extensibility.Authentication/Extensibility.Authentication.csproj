@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.2</TargetFramework>
+    <TargetFramework>netstandard1.3</TargetFramework>
     <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
     <AssemblyName>Octopus.Server.Extensibility.Authentication</AssemblyName>
     <Description>Provides the agreed authentication contracts between Octopus Server and Octopus Server Extensions.</Description>
@@ -15,7 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.0" />
-    <PackageReference Include="Octopus.Data" Version="3.0.0" />
+    <PackageReference Include="Octopus.Data" Version="3.1.0" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="5.0.4-removing-nancy0008" />
   </ItemGroup>
 
   <ItemGroup>
