@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net451;netstandard1.2</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net451</TargetFrameworks>
     <AssemblyName>Octopus.Node.Extensibility.Authentication</AssemblyName>
     <RootNamespace>Octopus.Node.Extensibility.Authentication</RootNamespace>
     <Description>Provides the agreed contracts between Octopus server side authentication extensions.</Description>
@@ -15,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Octopus.CoreUtilities" Version="1.1.1" />
     <PackageReference Include="Octopus.Data" Version="3.0.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
     <PackageReference Include="System.Security.Principal" Version="4.3.0" />
