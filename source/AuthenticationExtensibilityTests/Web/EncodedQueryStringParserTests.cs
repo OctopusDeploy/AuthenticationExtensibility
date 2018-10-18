@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Octopus.Node.Extensibility.Authentication.Web;
+using Octopus.Server.Extensibility.Authentication.Web;
 using Shouldly;
 
 namespace AuthenticationExtensibilityTests.Web

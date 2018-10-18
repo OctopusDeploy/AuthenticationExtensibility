@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Octopus.Node.Extensibility.Authentication.HostServices;
+using Octopus.Server.Extensibility.Authentication.HostServices;
 
 namespace AuthenticationExtensibilityTests
 {

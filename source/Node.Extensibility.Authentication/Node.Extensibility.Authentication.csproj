@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>net451;netstandard1.2</TargetFrameworks>
     <TargetFrameworks>netstandard2.0;net451</TargetFrameworks>
@@ -11,9 +10,8 @@
     <PackageId>Octopus.Node.Extensibility.Authentication</PackageId>
     <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
     <PackageLicenseUrl>https://octopus.com/</PackageLicenseUrl>
-    <PackageProjectUrl>https://octopus.com/</PackageProjectUrl>   
+    <PackageProjectUrl>https://octopus.com/</PackageProjectUrl>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="Octopus.CoreUtilities" Version="1.1.1" />
@@ -21,5 +19,4 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
     <PackageReference Include="System.Security.Principal" Version="4.3.0" />
   </ItemGroup>
-
 </Project>
