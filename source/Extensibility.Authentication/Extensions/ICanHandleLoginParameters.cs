@@ -2,6 +2,6 @@
 {
     public interface ICanHandleLoginParameters
     {
-        bool WasExternalLoginInitiated(string encodedQueryString, out string providerName);
+        bool WasExternalLoginInitiated(string encodedQueryString, out string providerName); 
     }
 }
