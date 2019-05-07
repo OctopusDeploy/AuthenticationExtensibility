@@ -1,9 +1,7 @@
-﻿using Octopus.CoreUtilities;
-
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+﻿namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface ICanHandleLoginParameters
     {
-        Maybe<LoginInitiatedResult> WasExternalLoginInitiated(string encodedQueryString);
+        bool WasExternalLoginInitiated(string encodedQueryString, out string providerName);
     }
 }
