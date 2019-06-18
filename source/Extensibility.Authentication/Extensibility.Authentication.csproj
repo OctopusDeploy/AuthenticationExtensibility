@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
     <RootNamespace>Octopus.Server.Extensibility.Authentication</RootNamespace>
     <AssemblyName>Octopus.Server.Extensibility.Authentication</AssemblyName>
     <Description>Provides the agreed authentication contracts between Octopus Server and Octopus Server Extensions.</Description>
@@ -14,7 +14,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.0" />
     <PackageReference Include="Octopus.CoreUtilities" Version="1.1.2" />
-    <PackageReference Include="Octopus.Data" Version="3.2.0" />
-    <PackageReference Include="Octopus.Server.Extensibility" Version="6.1.2" />
+    <PackageReference Include="Octopus.Data" Version="4.1.0" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="6.3.1-upgrade-netcore0001" />
   </ItemGroup>
 </Project>
