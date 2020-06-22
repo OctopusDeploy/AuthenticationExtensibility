@@ -4,6 +4,7 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface IAuthenticationProviderWithGroupSupport : IAuthenticationProvider
     {
-        AuthenticationProviderThatSupportsGroups GetGroupLookupElement();
+        /// <returns>Null if the provider is disabled</returns>
+        AuthenticationProviderThatSupportsGroups? GetGroupLookupElement();
     }
 }
