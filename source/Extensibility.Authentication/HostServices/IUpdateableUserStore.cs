@@ -13,11 +13,11 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
             string displayName,
             string emailAddress,
             CancellationToken cancellationToken,
-            ProviderUserGroups providerGroups = null,
-            IEnumerable<Identity> identities = null,
-            ApiKeyDescriptor apiKeyDescriptor = null,
+            ProviderUserGroups? providerGroups = null,
+            IEnumerable<Identity>? identities = null,
+            ApiKeyDescriptor? apiKeyDescriptor = null,
             bool isService = false,
-            string password = null);
+            string? password = null);
 
         void EnableUser(string userId);
 

@@ -9,12 +9,14 @@
     <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
     <PackageLicenseUrl>https://github.com/OctopusDeploy/AuthenticationExtensibility/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/OctopusDeploy/AuthenticationExtensibility</PackageProjectUrl>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.0" />
     <PackageReference Include="Octopus.CoreUtilities" Version="1.1.2" />
-    <PackageReference Include="Octopus.Data" Version="4.1.0" />
+    <PackageReference Include="Octopus.Data" Version="5.0.4-enh-tinytype-ids0003" />
     <PackageReference Include="Octopus.Server.Extensibility" Version="6.3.1" />
   </ItemGroup>
 </Project>

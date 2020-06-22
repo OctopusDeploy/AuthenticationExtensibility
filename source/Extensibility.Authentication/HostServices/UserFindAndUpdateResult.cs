@@ -15,8 +15,8 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
             FailureReason = failureReason;
         }
 
-        public bool Succeeded { get; private set; }
-        public IUser User { get; private set; }
-        public string FailureReason { get; private set; }
+        public bool Succeeded { get; }
+        public IUser? User { get; }
+        public string? FailureReason { get; }
     }
 }

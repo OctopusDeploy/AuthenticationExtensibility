@@ -21,8 +21,8 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 
         public bool Succeeded { get; }
 
-        public IEnumerable<string> GroupIds { get; }
+        public IEnumerable<string>? GroupIds { get; }
 
-        public string FailureReason { get; }
+        public string? FailureReason { get; }
     }
 }

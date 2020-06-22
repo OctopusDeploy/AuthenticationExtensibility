@@ -11,13 +11,13 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         /// The username to log in with.
         /// </summary>
         [Required(ErrorMessage = "Please provide a username.")]
-        public string Username { get; set; }
+        public string Username { get; set; } = string.Empty;
 
         /// <summary>
         /// The password to log in with.
         /// </summary>
         [Required(ErrorMessage = "Please provide a password.")]
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         /// <summary>
         /// Whether the cookie should be persistent.
@@ -27,6 +27,6 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         /// <summary>
         /// Encapsulated state for post successful login.
         /// </summary>
-        public LoginState State { get; set; }
+        public LoginState State { get; set; } = new LoginState();
     }
 }
