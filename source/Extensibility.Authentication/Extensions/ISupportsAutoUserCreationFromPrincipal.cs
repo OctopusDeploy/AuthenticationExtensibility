@@ -5,7 +5,7 @@ using Octopus.Server.Extensibility.Results;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
-    public interface ISupportsAutoUserCreationFromPrincipal
+    public interface ISupportsAutoUserCreationFromPrincipal : IIdentityProviderService
     {
         ResultFromExtension<IUser> GetOrCreateUser(IPrincipal principal, CancellationToken cancellationToken);
     }

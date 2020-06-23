@@ -4,7 +4,7 @@ using Octopus.Server.Extensibility.Results;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
-    public interface IDoesBasicAuthentication
+    public interface IDoesBasicAuthentication : IIdentityProviderService
     {
         /// <summary>
         /// Gets the priority order for checking credentials 
