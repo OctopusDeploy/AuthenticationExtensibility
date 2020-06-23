@@ -1,5 +1,6 @@
 ﻿using System.Threading;
-using Octopus.Server.Extensibility.Authentication.Storage.User;
+using Octopus.Data.Model.User;
+using Octopus.Server.Extensibility.Results;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
@@ -12,6 +13,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// the credentials don't match a known user.</remarks>
         int Priority { get; }
 
-        AuthenticationUserCreateResult ValidateCredentials(string username, string password, CancellationToken cancellationToken);
+        ResultFromExtension<IUser> ValidateCredentials(string username, string password, CancellationToken cancellationToken);
     }
 }
