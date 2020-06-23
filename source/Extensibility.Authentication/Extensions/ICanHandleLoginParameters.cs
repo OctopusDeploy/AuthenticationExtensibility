@@ -1,6 +1,4 @@
-﻿using Octopus.CoreUtilities;
-
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+﻿namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface ICanHandleLoginParameters
     {
