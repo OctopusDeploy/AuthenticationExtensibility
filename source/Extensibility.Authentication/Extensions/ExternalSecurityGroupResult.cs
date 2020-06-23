@@ -4,13 +4,13 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public class ExternalSecurityGroupResult
     {
-        public ExternalSecurityGroupResult(string providerame, ExternalSecurityGroup[] groups)
+        public ExternalSecurityGroupResult(string providerName, ExternalSecurityGroup[] groups)
         {
-            Providerame = providerame;
+            ProviderName = providerName;
             Groups = groups;
         }
 
-        public string Providerame { get; set; }
+        public string ProviderName { get; set; }
         public ExternalSecurityGroup[] Groups { get; set; }
     }
 }

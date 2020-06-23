@@ -8,21 +8,10 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         {
             IdentityProviderName = identityProviderName;
             GroupIds = groupIds;
-            Succeeded = true;
-        }
-
-        public ExternalGroupResult(string identityProviderName, string failureReason)
-        {
-            IdentityProviderName = identityProviderName;
-            FailureReason = failureReason;
         }
 
         public string IdentityProviderName { get; }
 
-        public bool Succeeded { get; }
-
         public IEnumerable<string>? GroupIds { get; }
-
-        public string? FailureReason { get; }
     }
 }
