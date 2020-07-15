@@ -14,7 +14,7 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Octopus.Data" Version="5.0.4-enh-nullable0013" />
-    <PackageReference Include="Octopus.Server.Extensibility" Version="9.1.4-enh-nullable0014" />
+    <PackageReference Include="Octopus.Data" Version="5.1.0" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="10.0.0" />
   </ItemGroup>
 </Project>
