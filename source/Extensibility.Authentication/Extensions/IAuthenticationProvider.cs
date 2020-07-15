@@ -1,4 +1,5 @@
-﻿using Octopus.Server.Extensibility.Authentication.Resources;
+﻿using System;
+using Octopus.Server.Extensibility.Authentication.Resources;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
@@ -13,9 +14,9 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// Gets whether the authentication is currently enabled
         /// </summary>
         bool IsEnabled { get; }
-        
+
         /// <summary>
-        /// Indicates whether this authentication provider supports password management through the 
+        /// Indicates whether this authentication provider supports password management through the
         /// Octopus UI.  External providers, for example, typical do not.
         /// </summary>
         bool SupportsPasswordManagement { get; }

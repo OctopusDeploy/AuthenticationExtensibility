@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 
 namespace Octopus.Server.Extensibility.Authentication.Web
@@ -13,11 +14,12 @@ namespace Octopus.Server.Extensibility.Authentication.Web
             var pairs = encodedQueryString.Split('&');
 
             return pairs.Select(p =>
-                {
-                    var paramAndValue = p.Split('=');
-                    return new QueryStringParameter(paramAndValue[0], DecodeValue(paramAndValue[1]));
-                }
-            ).ToArray();
+                    {
+                        var paramAndValue = p.Split('=');
+                        return new QueryStringParameter(paramAndValue[0], DecodeValue(paramAndValue[1]));
+                    }
+                )
+                .ToArray();
         }
 
         string DecodeValue(string encodedValue)

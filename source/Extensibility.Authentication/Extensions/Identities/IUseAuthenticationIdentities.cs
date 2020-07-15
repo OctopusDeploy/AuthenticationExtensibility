@@ -1,4 +1,5 @@
-﻿using Octopus.Server.Extensibility.Authentication.Resources.Identities;
+﻿using System;
+using Octopus.Server.Extensibility.Authentication.Resources.Identities;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions.Identities
 {

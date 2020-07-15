@@ -1,4 +1,6 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.Resources
+﻿using System;
+
+namespace Octopus.Server.Extensibility.Authentication.Resources
 {
     public enum IdentityType
     {

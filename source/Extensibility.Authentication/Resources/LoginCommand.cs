@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Octopus.Server.Extensibility.Authentication.Resources
 {
@@ -23,7 +24,7 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         /// Whether the cookie should be persistent.
         /// </summary>
         public bool RememberMe { get; set; }
-        
+
         /// <summary>
         /// Encapsulated state for post successful login.
         /// </summary>

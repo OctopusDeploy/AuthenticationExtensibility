@@ -1,3 +1,5 @@
+using System;
+
 namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public enum InvalidLoginAction

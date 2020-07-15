@@ -1,4 +1,6 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.HostServices
+﻿using System;
+
+namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public interface ILoginRecorder
     {

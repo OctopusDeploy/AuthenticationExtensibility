@@ -1,3 +1,4 @@
+using System;
 using Octopus.Server.Extensibility.Authentication.Resources;
 
 namespace Octopus.Server.Extensibility.Authentication.Extensions

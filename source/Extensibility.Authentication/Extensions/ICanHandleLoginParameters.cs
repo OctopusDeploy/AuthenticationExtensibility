@@ -1,4 +1,6 @@
-﻿namespace Octopus.Server.Extensibility.Authentication.Extensions
+﻿using System;
+
+namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface ICanHandleLoginParameters : IIdentityProviderService
     {
