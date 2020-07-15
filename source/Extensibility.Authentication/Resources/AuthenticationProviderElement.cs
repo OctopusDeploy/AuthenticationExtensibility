@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Octopus.Data.Model;
 
@@ -14,7 +16,7 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
             Links = new LinkCollection();
         }
 
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [JsonConverter(typeof(StringEnumConverter))]
         public IdentityType IdentityType { get; set; }
@@ -23,8 +25,8 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
 
         public LinkCollection Links { get; set; }
 
-        public string[] JavascriptLinks { get; set; }
+        public string[] JavascriptLinks { get; set; } = Array.Empty<string>();
 
-        public string[] CSSLinks { get; set; }
+        public string[] CSSLinks { get; set; } = Array.Empty<string>();
     }
 }

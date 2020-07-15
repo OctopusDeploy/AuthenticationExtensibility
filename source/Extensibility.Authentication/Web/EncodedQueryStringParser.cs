@@ -15,13 +15,9 @@ namespace Octopus.Server.Extensibility.Authentication.Web
             return pairs.Select(p =>
                 {
                     var paramAndValue = p.Split('=');
-                    return new QueryStringParameter
-                    {
-                        Name = paramAndValue[0],
-                        Value = DecodeValue(paramAndValue[1])
-                    };
+                    return new QueryStringParameter(paramAndValue[0], DecodeValue(paramAndValue[1]));
                 }
-                ).ToArray();
+            ).ToArray();
         }
 
         string DecodeValue(string encodedValue)
@@ -31,8 +27,14 @@ namespace Octopus.Server.Extensibility.Authentication.Web
 
         public class QueryStringParameter
         {
-            public string Name { get; set; }
-            public string Value { get; set; }
+            public QueryStringParameter(string name, string value)
+            {
+                Name = name;
+                Value = value;
+            }
+
+            public string Name { get; }
+            public string Value { get; }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using Octopus.Data;
 using Octopus.Data.Model.User;
 using Octopus.Data.Storage.User;
 
@@ -8,16 +9,16 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public interface IUpdateableUserStore : IUserStore
     {
-        UserCreateResult Create(
+        Result<IUser> Create(
             string username,
             string displayName,
             string emailAddress,
             CancellationToken cancellationToken,
-            ProviderUserGroups providerGroups = null,
-            IEnumerable<Identity> identities = null,
-            ApiKeyDescriptor apiKeyDescriptor = null,
+            ProviderUserGroups? providerGroups = null,
+            IEnumerable<Identity>? identities = null,
+            ApiKeyDescriptor? apiKeyDescriptor = null,
             bool isService = false,
-            string password = null);
+            string? password = null);
 
         void EnableUser(string userId);
 
