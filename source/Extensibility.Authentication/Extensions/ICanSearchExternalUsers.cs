@@ -7,6 +7,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
     public interface ICanSearchExternalUsers : IIdentityProviderService
     {
         /// <returns>Null if the provider is disabled.</returns>
-        ResultFromExtension<ExternalUserLookupResult> Search(string searchTerm, CancellationToken cancellationToken);
+        IResultFromExtension<ExternalUserLookupResult> Search(string searchTerm, CancellationToken cancellationToken);
     }
 }

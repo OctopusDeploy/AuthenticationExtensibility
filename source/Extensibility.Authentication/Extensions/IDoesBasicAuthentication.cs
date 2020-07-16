@@ -16,6 +16,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
         /// </remarks>
         int Priority { get; }
 
-        ResultFromExtension<IUser> ValidateCredentials(string username, string password, CancellationToken cancellationToken);
+        IResultFromExtension<IUser> ValidateCredentials(string username, string password, CancellationToken cancellationToken);
     }
 }

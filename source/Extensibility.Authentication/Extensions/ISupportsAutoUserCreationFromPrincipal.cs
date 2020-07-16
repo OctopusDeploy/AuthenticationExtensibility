@@ -8,6 +8,6 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 {
     public interface ISupportsAutoUserCreationFromPrincipal : IIdentityProviderService
     {
-        ResultFromExtension<IUser> GetOrCreateUser(IPrincipal principal, CancellationToken cancellationToken);
+        IResultFromExtension<IUser> GetOrCreateUser(IPrincipal principal, CancellationToken cancellationToken);
     }
 }

@@ -9,7 +9,7 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
     public interface IUpdateableUserStore : IUserStore
     {
-        Result<IUser> Create(
+        IResult<IUser> Create(
             string username,
             string displayName,
             string emailAddress,
