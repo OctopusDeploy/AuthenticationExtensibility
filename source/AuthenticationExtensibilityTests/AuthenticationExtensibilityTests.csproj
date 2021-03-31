@@ -4,6 +4,7 @@
     <RootNamespace>AuthenticationExtensibilityTests</RootNamespace>
     <AssemblyName>AuthenticationExtensibilityTests</AssemblyName>
     <Description>AuthenticationExtensibilityTests</Description>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />

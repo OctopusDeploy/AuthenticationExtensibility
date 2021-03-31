@@ -14,7 +14,7 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Octopus.Data" Version="5.1.2" />
-    <PackageReference Include="Octopus.Server.Extensibility" Version="10.0.2" />
+    <PackageReference Include="Octopus.Data" Version="5.3.1-enh-mediatorcontracts.1" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="13.0.1-enh-mediatorcont0020" />
   </ItemGroup>
 </Project>
