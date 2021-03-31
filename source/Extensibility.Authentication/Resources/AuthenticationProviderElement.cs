@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Octopus.Data.Model;
+using Octopus.Server.MessageContracts;
 
 namespace Octopus.Server.Extensibility.Authentication.Resources
 {

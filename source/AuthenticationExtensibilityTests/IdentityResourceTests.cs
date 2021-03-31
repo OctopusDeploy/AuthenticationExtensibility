@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 using Octopus.Data.Model.User;
-using Octopus.Data.Resources.Users;
+using Octopus.Server.MessageContracts.Features.Users;
 
 namespace AuthenticationExtensibilityTests
 {

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Octopus.Data.Model.User;
-using Octopus.Data.Resources.Users;
 using Octopus.Server.Extensibility.Authentication.Resources.Identities;
+using Octopus.Server.MessageContracts.Features.Users;
 
 namespace Octopus.Server.Extensibility.Authentication.Model
 {
