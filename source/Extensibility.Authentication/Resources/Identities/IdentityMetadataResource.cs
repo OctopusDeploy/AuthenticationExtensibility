@@ -1,5 +1,5 @@
 ﻿using System;
-using Octopus.Data.Model;
+using Octopus.Server.MessageContracts;
 
 namespace Octopus.Server.Extensibility.Authentication.Resources.Identities
 {
