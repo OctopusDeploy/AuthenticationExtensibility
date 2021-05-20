@@ -18,5 +18,6 @@
     <PackageReference Include="Octopus.Server.Extensibility" Version="14.0.1" />
     <PackageReference Include="Octopus.Data" Version="5.1.2" />
     <PackageReference Include="Octopus.Server.Extensibility" Version="11.1.1-missedthemark-ha0001" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="14.0.6-missedthemark-ha0001" />
   </ItemGroup>
 </Project>
