@@ -12,4 +12,4 @@ namespace Octopus.Server.Extensibility.Authentication.Extensions
 
         public IdentityResource[] Identities { get; }
     }
-}
+} 
