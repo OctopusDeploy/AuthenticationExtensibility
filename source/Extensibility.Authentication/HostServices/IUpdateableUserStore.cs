@@ -4,6 +4,7 @@ using System.Threading;
 using Octopus.Data;
 using Octopus.Data.Model.User;
 using Octopus.Data.Storage.User;
+using Octopus.Server.MessageContracts.Features.Users;
 
 namespace Octopus.Server.Extensibility.Authentication.HostServices
 {
@@ -20,16 +21,16 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
             bool isService = false,
             string? password = null);
 
-        void EnableUser(string userId);
+        void EnableUser(UserId userId);
 
-        void DisableUser(string userId);
+        void DisableUser(UserId userId);
 
-        IUser AddIdentity(string userId, Identity identity, CancellationToken cancellationToken);
+        IUser AddIdentity(UserId userId, Identity identity, CancellationToken cancellationToken);
 
-        IUser UpdateIdentity(string userId, Identity identity, CancellationToken cancellationToken);
+        IUser UpdateIdentity(UserId userId, Identity identity, CancellationToken cancellationToken);
 
-        void ClearSecurityGroupIds(string provider, string userId);
+        void ClearSecurityGroupIds(string provider, UserId userId);
 
-        void SetSecurityGroupIds(string provider, string userId, IEnumerable<string> ids, DateTimeOffset updated);
+        void SetSecurityGroupIds(string provider, UserId userId, IEnumerable<string> ids, DateTimeOffset updated);
     }
 }
