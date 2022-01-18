@@ -1,10 +1,12 @@
 ﻿using System;
+using Octopus.TinyTypes;
 
 namespace Octopus.Server.Extensibility.Authentication.HostServices
-{
-    public enum SessionExpiry
+{ 
+    public class SessionExpiry: TinyType<int>
     {
-        TwentyMinutes,
-        TwentyDays
+        public SessionExpiry(int seconds) : base(seconds)
+        {
+        }
     }
 }
