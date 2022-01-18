@@ -7,5 +7,7 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
         string[] GetTrustedRedirectUrls();
 
         bool GetIsAutoLoginEnabled();
+        
+        bool GetRememberMeEnabled();
     }
 }
