@@ -6,7 +6,7 @@ namespace Octopus.Server.Extensibility.Authentication.HostServices
     public interface IAuthCookieCreator
     {
         OctoCookie[] CreateAuthCookies(Guid token,
-            SessionExpiry expiry,
+            TimeSpan expiry,
             bool requestAppearsToBeHttps,
             bool? forceSecureCookie = null);
     }
