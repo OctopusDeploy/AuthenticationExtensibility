@@ -14,7 +14,7 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Octopus.Data" Version="7.1.6-ankith-fm-addSessionsTokenToUser" />
-    <PackageReference Include="Octopus.Server.Extensibility" Version="14.3.210-ankith-fm-bumpData" />
+    <PackageReference Include="Octopus.Data" Version="7.1.145-ankith-fm-addSessionsTokenToUser" />
+    <PackageReference Include="Octopus.Server.Extensibility" Version="14.3.215-ankith-fm-bumpData" />
   </ItemGroup>
 </Project>
