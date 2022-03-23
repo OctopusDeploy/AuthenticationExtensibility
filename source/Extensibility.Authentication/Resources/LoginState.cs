@@ -15,5 +15,10 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         /// connection.
         /// </summary>
         public bool UsingSecureConnection { get; set; }
+
+        /// <summary>
+        /// A unique ID to store and retrieve session data from Blob storage
+        /// </summary>
+        public string SessionId { get; set; } = string.Empty;
     }
 }
