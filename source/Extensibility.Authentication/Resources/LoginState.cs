@@ -19,6 +19,6 @@ namespace Octopus.Server.Extensibility.Authentication.Resources
         /// <summary>
         /// A unique ID to store and retrieve session data from Blob storage
         /// </summary>
-        public string SessionId { get; set; } = string.Empty;
+        public Guid SessionId { get; set; }
     }
 }
