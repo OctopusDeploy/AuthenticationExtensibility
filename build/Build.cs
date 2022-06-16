@@ -1,44 +1,51 @@
 using System;
-using System.Linq;
+using JetBrains.Annotations;
 using Nuke.Common;
-using Nuke.Common.CI;
 using Nuke.Common.Execution;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tools.DotNet;
+using Nuke.Common.Tools.OctoVersion;
 using Nuke.Common.Utilities.Collections;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
-using Nuke.Common.Tools.OctoVersion;
 
 [CheckBuildProjectConfigurations]
 [UnsetVisualStudioEnvironmentVariables]
 class Build : NukeBuild
 {
-    readonly Configuration Configuration = Configuration.Release;
+    /// Support plugins are available for:
+    /// - JetBrains ReSharper        https://nuke.build/resharper
+    /// - JetBrains Rider            https://nuke.build/rider
+    /// - Microsoft VisualStudio     https://nuke.build/visualstudio
+    /// - Microsoft VSCode           https://nuke.build/vscode
 
-    [Solution] readonly Solution Solution;
+    [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
+    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
+    // readonly Configuration Configuration = Configuration.Release;
 
-    [OctoVersion] readonly OctoVersionInfo OctoVersionInfo;
+    [Solution(GenerateProjects = true)] readonly Solution Solution;
+
+    [Parameter("Whether to auto-detect the branch name - this is okay for a local build, but should not be used under CI.")]
+    readonly bool AutoDetectBranch = IsLocalBuild;
+
+    [Parameter("Branch name for OctoVersion to use to calculate the version number. Can be set via the environment variable OCTOVERSION_CurrentBranch.",
+        Name = "OCTOVERSION_CurrentBranch")]
+    readonly string BranchName;
+
+    [OctoVersion(UpdateBuildNumber = true, BranchParameter = nameof(BranchName),
+        AutoDetectBranchParameter = nameof(AutoDetectBranch), Framework = "net6.0")]
+    readonly OctoVersionInfo OctoVersionInfo;
 
     static AbsolutePath SourceDirectory => RootDirectory / "source";
     static AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
-    static AbsolutePath PublishDirectory => RootDirectory / "publish";
     static AbsolutePath LocalPackagesDir => RootDirectory / ".." / "LocalPackages";
 
     Target Clean => _ => _
-        .Before(Restore)
         .Executes(() =>
         {
-            SourceDirectory.GlobDirectories("**/bin", "**/obj", "**/TestResults").ForEach(DeleteDirectory);
+            SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
             EnsureCleanDirectory(ArtifactsDirectory);
-            EnsureCleanDirectory(PublishDirectory);
-        });
-
-    Target CalculateVersion => _ => _
-        .Executes(() =>
-        {
-            // all the magic happens inside `[OctoVersion]` above.
         });
 
     Target Restore => _ => _
@@ -50,19 +57,18 @@ class Build : NukeBuild
         });
 
     Target Compile => _ => _
-        .DependsOn(Clean)
         .DependsOn(Restore)
         .Executes(() =>
         {
-            Logger.Info("Building Octopus Server Extensibility Authentication v{0}", OctoVersionInfo.FullSemVer);
-
             DotNetBuild(_ => _
                 .SetProjectFile(Solution)
                 .SetConfiguration(Configuration)
                 .SetVersion(OctoVersionInfo.FullSemVer)
+                .SetInformationalVersion(OctoVersionInfo.InformationalVersion)
                 .EnableNoRestore());
         });
 
+    [PublicAPI]
     Target Test => _ => _
         .DependsOn(Compile)
         .Executes(() =>
@@ -70,22 +76,14 @@ class Build : NukeBuild
             DotNetTest(_ => _
                 .SetProjectFile(Solution)
                 .SetConfiguration(Configuration)
-                .SetNoBuild(true)
-                .EnableNoRestore()
-                .SetFilter(@"FullyQualifiedName\!~Integration.Tests"));
+                .EnableNoBuild()
+                .EnableNoRestore());
         });
 
     Target Pack => _ => _
-        .DependsOn(Test)
-        .Produces(ArtifactsDirectory / "*.nupkg")
+        .DependsOn(Compile)
         .Executes(() =>
         {
-            Logger.Info("Packing Octopus Server Extensibility Authentication v{0}", OctoVersionInfo.FullSemVer);
-            
-            // This is done to pass the data to github actions
-            Console.Out.WriteLine($"::set-output name=semver::{OctoVersionInfo.FullSemVer}");
-            Console.Out.WriteLine($"::set-output name=prerelease_tag::{OctoVersionInfo.PreReleaseTagWithDash}");
-
             DotNetPack(_ => _
                 .SetProject(Solution)
                 .SetVersion(OctoVersionInfo.FullSemVer)
@@ -93,9 +91,7 @@ class Build : NukeBuild
                 .SetOutputDirectory(ArtifactsDirectory)
                 .EnableNoBuild()
                 .DisableIncludeSymbols()
-                .SetVerbosity(DotNetVerbosity.Normal)
-                .SetProperty("NuspecProperties", $"Version={OctoVersionInfo.FullSemVer}"));
-            
+                .SetVerbosity(DotNetVerbosity.Normal));
         });
 
     Target CopyToLocalPackages => _ => _
@@ -105,30 +101,12 @@ class Build : NukeBuild
         {
             EnsureExistingDirectory(LocalPackagesDir);
             ArtifactsDirectory.GlobFiles("*.nupkg")
-                .ForEach(package =>
-                {
-                    CopyFileToDirectory(package, LocalPackagesDir);
-                });
-        });
-
-    Target OutputPackagesToPush => _ => _
-        .DependsOn(Pack)
-        .Executes(() =>
-        {
-            var artifactPaths = ArtifactsDirectory.GlobFiles("*.nupkg")
-                .NotEmpty()
-                .Select(p => p.ToString());
-
-            System.Console.WriteLine($"::set-output name=packages_to_push::{string.Join(',', artifactPaths)}");
+                .ForEach(package => CopyFileToDirectory(package, LocalPackagesDir, FileExistsPolicy.Overwrite));
         });
 
     Target Default => _ => _
-        .DependsOn(OutputPackagesToPush);
+        .DependsOn(Pack)
+        .DependsOn(CopyToLocalPackages);
 
-    /// Support plugins are available for:
-    /// - JetBrains ReSharper        https://nuke.build/resharper
-    /// - JetBrains Rider            https://nuke.build/rider
-    /// - Microsoft VisualStudio     https://nuke.build/visualstudio
-    /// - Microsoft VSCode           https://nuke.build/vscode
     public static int Main() => Execute<Build>(x => x.Default);
 }
