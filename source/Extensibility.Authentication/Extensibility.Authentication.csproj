@@ -7,7 +7,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <Authors>Octopus Deploy</Authors>
     <PackageId>Octopus.Server.Extensibility.Authentication</PackageId>
-    <PackageIconUrl>http://i.octopusdeploy.com/resources/Avatar3_360.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/OctopusDeploy/AuthenticationExtensibility</PackageProjectUrl>
     <Nullable>enable</Nullable>
