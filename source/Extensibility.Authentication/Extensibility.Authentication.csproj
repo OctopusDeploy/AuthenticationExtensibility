@@ -17,4 +17,7 @@
     <PackageReference Include="Octopus.Data" Version="8.0.178" />
     <PackageReference Include="Octopus.Server.Extensibility" Version="14.3.239" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
