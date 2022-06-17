@@ -43,7 +43,7 @@ namespace Octopus.Server.Extensibility.Authentication.Model
             return identity;
         }
 
-        public static bool Equals(this Identity identity, IdentityResource other)
+        public static bool IsEquivalent(this Identity identity, IdentityResource other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (identity.IdentityProviderName != other.IdentityProviderName) return false;
