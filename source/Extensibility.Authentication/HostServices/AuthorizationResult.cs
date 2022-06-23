@@ -1,19 +1,18 @@
 using System;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
+namespace Octopus.Server.Extensibility.Authentication.HostServices;
+
+public class AuthorizationResult
 {
-    public class AuthorizationResult
+    readonly Lazy<string> helpText;
+
+    public AuthorizationResult(bool isAuthorized, Lazy<string>? helpText = null)
     {
-        readonly Lazy<string> helpText;
-
-        public AuthorizationResult(bool isAuthorized, Lazy<string>? helpText = null)
-        {
-            IsAuthorized = isAuthorized;
-            this.helpText = helpText ?? new Lazy<string>(() => string.Empty);
-        }
-
-        public bool IsAuthorized { get; }
-
-        public string? HelpText => helpText.Value;
+        IsAuthorized = isAuthorized;
+        this.helpText = helpText ?? new Lazy<string>(() => string.Empty);
     }
+
+    public bool IsAuthorized { get; }
+
+    public string? HelpText => helpText.Value;
 }

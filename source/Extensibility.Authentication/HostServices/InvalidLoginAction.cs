@@ -1,11 +1,10 @@
 using System;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
+namespace Octopus.Server.Extensibility.Authentication.HostServices;
+
+public enum InvalidLoginAction
 {
-    public enum InvalidLoginAction
-    {
-        Continue,
-        Slow,
-        Ban
-    }
+    Continue,
+    Slow,
+    Ban
 }
