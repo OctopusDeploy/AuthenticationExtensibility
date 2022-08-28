@@ -4,10 +4,9 @@ using System.Threading;
 using Octopus.Data.Model.User;
 using Octopus.Server.Extensibility.Results;
 
-namespace Octopus.Server.Extensibility.Authentication.Extensions
+namespace Octopus.Server.Extensibility.Authentication.Extensions;
+
+public interface ISupportsAutoUserCreationFromPrincipal : IIdentityProviderService
 {
-    public interface ISupportsAutoUserCreationFromPrincipal : IIdentityProviderService
-    {
-        IResultFromExtension<IUser> GetOrCreateUser(IPrincipal principal, CancellationToken cancellationToken);
-    }
+    IResultFromExtension<IUser> GetOrCreateUser(IPrincipal principal, CancellationToken cancellationToken);
 }

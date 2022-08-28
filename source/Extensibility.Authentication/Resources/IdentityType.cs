@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace Octopus.Server.Extensibility.Authentication.Resources
+namespace Octopus.Server.Extensibility.Authentication.Resources;
+
+public enum IdentityType
 {
-    public enum IdentityType
-    {
-        Guest,
-        UsernamePassword,
-        ActiveDirectory,
-        OAuth
-    }
+    Guest,
+    UsernamePassword,
+    ActiveDirectory,
+    OAuth
 }
