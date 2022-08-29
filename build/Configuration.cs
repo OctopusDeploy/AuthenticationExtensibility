@@ -1,5 +1,7 @@
+// ReSharper disable RedundantUsingDirective
 using System;
 using System.ComponentModel;
+using Nuke.Common.Tooling;
 
 [TypeConverter(typeof(TypeConverter<Configuration>))]
 public class Configuration : Enumeration
