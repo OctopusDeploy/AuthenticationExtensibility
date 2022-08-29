@@ -1,4 +1,5 @@
 // ReSharper disable RedundantUsingDirective
+
 using System;
 using JetBrains.Annotations;
 using Nuke.Common;
