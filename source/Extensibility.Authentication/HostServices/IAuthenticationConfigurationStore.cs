@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace Octopus.Server.Extensibility.Authentication.HostServices
-{
-    public interface IAuthenticationConfigurationStore
-    {
-        string[] GetTrustedRedirectUrls();
+namespace Octopus.Server.Extensibility.Authentication.HostServices;
 
-        bool GetIsAutoLoginEnabled();
-        
-        bool GetRememberMeEnabled();
-    }
+public interface IAuthenticationConfigurationStore
+{
+    string[] GetTrustedRedirectUrls();
+
+    bool GetIsAutoLoginEnabled();
+
+    bool GetRememberMeEnabled();
 }

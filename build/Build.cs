@@ -1,3 +1,4 @@
+// ReSharper disable RedundantUsingDirective
 using System;
 using JetBrains.Annotations;
 using Nuke.Common;
@@ -19,15 +20,13 @@ class Build : NukeBuild
     /// - JetBrains Rider            https://nuke.build/rider
     /// - Microsoft VisualStudio     https://nuke.build/visualstudio
     /// - Microsoft VSCode           https://nuke.build/vscode
-
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
     // readonly Configuration Configuration = Configuration.Release;
 
     [Solution(GenerateProjects = true)] readonly Solution Solution;
 
-    [Parameter("Whether to auto-detect the branch name - this is okay for a local build, but should not be used under CI.")]
-    readonly bool AutoDetectBranch = IsLocalBuild;
+    [Parameter("Whether to auto-detect the branch name - this is okay for a local build, but should not be used under CI.")] readonly bool AutoDetectBranch = IsLocalBuild;
 
     [Parameter("Branch name for OctoVersion to use to calculate the version number. Can be set via the environment variable OCTOVERSION_CurrentBranch.",
         Name = "OCTOVERSION_CurrentBranch")]
